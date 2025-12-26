@@ -1,0 +1,399 @@
+body {
+    min-height: 100vh;
+    background: radial-gradient(
+        circle at top,
+        #0b1c2d 0%,
+        #050b14 45%,
+        #02060c 100%
+    );
+    margin: 0;
+    padding: 2rem 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+}
+
+header .logo {
+    width: 180px;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.8rem 1.8rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+
+    background: linear-gradient(135deg, #1875E8, #00F4BF);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 244, 191, 0.45),
+                0 10px 40px rgba(0, 0, 0, 0.4);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(0, 244, 191, 0.7),
+                0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+main.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 4rem 5rem;
+    position: relative;
+
+    border-radius: 22px;
+    border: 1px solid rgba(0, 244, 191, 0.5);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(6, 18, 32, 0.95),
+            rgba(4, 10, 18, 0.98)
+        ),
+        url('../assets/PNG/Imagem com borda.png');
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        inset 0 0 40px rgba(0, 244, 191, 0.05);
+}
+
+main.container .grafismo {
+    background: url('../assets/SVG/Grafismo verde.svg') no-repeat;
+    width: 32rem;
+    height: 2rem;
+    position: absolute;
+    top: -18px;
+    left: 20px;
+}
+
+main.container h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    line-height: 110%;
+}
+
+main.container h1 span {
+    color: #1875E8;
+    text-shadow: 0 0 20px rgba(24, 117, 232, 0.6);
+}
+
+form {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #cdefff;
+}
+
+form .input-group select,
+form .input-group input {
+    height: 3.6rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+
+    border-radius: 14px;
+    border: 1px solid rgba(0, 244, 191, 0.6);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+
+    backdrop-filter: blur(6px);
+}
+
+form .input-group select {
+    min-width: 240px;
+    appearance: none;
+    background:
+        url('../assets/PNG/Arrow down.png') no-repeat right 1rem center,
+        rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+form .input-group input {
+    width: 90px;
+    text-align: center;
+}
+
+form button {
+    height: 3.6rem;
+    padding: 0 2rem;
+    border-radius: 16px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+
+    background: linear-gradient(135deg, #1875E8, #00F4BF);
+    border: none;
+
+    box-shadow:
+        0 0 25px rgba(0, 244, 191, 0.45),
+        0 10px 40px rgba(0, 0, 0, 0.4);
+
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 35px rgba(0, 244, 191, 0.7),
+        0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.hachuras {
+    margin: 4rem 0;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.container section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.container section h2 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.container section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.container section ul li {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.container section ul li span {
+    color: #00F4BF;
+    font-size: 1.9rem;
+    font-style: italic;
+    text-shadow: 0 0 15px rgba(0, 244, 191, 0.6);
+}
+
+.container section img {
+    max-width: 260px;
+    width: 100%;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box {
+    background: linear-gradient(180deg, #0c1b2d, #050b14);
+    border-radius: 22px;
+    padding: 2.2rem 2.4rem;
+    max-width: 440px;
+    width: calc(100% - 32px);
+
+    border: 1px solid rgba(0, 244, 191, 0.5);
+    box-shadow:
+        0 0 40px rgba(0, 244, 191, 0.25),
+        0 30px 80px rgba(0, 0, 0, 0.7);
+
+    text-align: center;
+}
+
+.modal-box h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #00F4BF;
+}
+
+.modal-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: #e6f6ff;
+    margin-bottom: 1.6rem;
+    line-height: 1.4;
+}
+
+.modal-box button {
+    height: 3.1rem;
+    padding: 0 2.2rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+
+    background: linear-gradient(135deg, #1875E8, #00F4BF);
+    box-shadow: 0 0 20px rgba(0, 244, 191, 0.45);
+}
+
+@media (max-width: 1024px) {
+    main.container {
+        padding: 3rem 3rem;
+    }
+
+    main.container .grafismo {
+        width: 24rem;
+    }
+
+    form {
+        gap: 1.5rem;
+    }
+
+    form .input-group select {
+        min-width: 200px;
+    }
+
+    .container section {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+
+    header .logo {
+        width: 150px;
+    }
+
+    .btn-back {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0.9rem 1rem;
+    }
+
+    main.container {
+        padding: 2.5rem 1.8rem;
+        border-radius: 18px;
+    }
+
+    main.container .grafismo {
+        width: 18rem;
+        top: -14px;
+        left: 12px;
+    }
+
+    main.container h1 {
+        font-size: 2.6rem;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form .input-group select,
+    form .input-group input {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+        height: 3.8rem;
+        font-size: 1.3rem;
+    }
+
+    .hachuras {
+        margin: 3rem 0;
+    }
+
+    .container section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .container section ul {
+        width: 100%;
+    }
+
+    .container section ul li {
+        justify-content: space-between;
+    }
+
+    .container section img {
+        align-self: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main.container {
+        padding: 2rem 1.4rem;
+    }
+
+    main.container h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn-back {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-box {
+        padding: 1.8rem 1.6rem;
+    }
+
+    .modal-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-box p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/_reset.css">
+    <link rel="stylesheet" href="./styles/buyticket.css">
+    <title>e-Ticket</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./assets/PNG/Logo e-tricket.png" alt="Logo">
+    </header>
+
+    <a href="index.html" class="btn-back">← Back to Home</a>
+
+    <main class="container">
+
+        <div class="grafismo"></div>
+        <h1>Buy Your <span>Ticket</span></h1>
+        <form action="">
+            <label class="input-group">
+                Choose the type
+                <select name="tipo-ingresso" id="tipo-ingresso">
+                    <option value="inferior">Lower Level Seating</option>
+                    <option value="superior">Upper Level Seating</option>
+                    <option value="pista">General Admission</option>
+                </select>
+            </label>
+            <label class="input-group">Qty.
+                <input type="number" id="qtd" placeholder="00" min="1" max="10">
+            </label>
+            <button onclick="comprar()" type="button">Buy</button>
+        </form>
+        <img class="hachuras" src="./assets/SVG/Hachuras.svg" alt="">
+        <section>
+            <h2>Available quantity</h2>
+
+            <ul class="lista">
+                <li>General Admission<span id="qtd-pista">100</span></li>
+                <li>Upper Level Seating<span id="qtd-superior">200</span></li>
+                <li>Lower Level Seating<span id="qtd-inferior">400</span></li>
+                
+            </ul>
+            <img src="./assets/Ingresso.svg" alt="">
+        </section>
+
+    <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+        <h3 id="modal-title">Título</h3>
+        <p id="modal-message">Mensagem</p>
+        <button onclick="fecharModal()">OK</button>
+    </div>
+    </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

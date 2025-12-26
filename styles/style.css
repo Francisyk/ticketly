@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f1a, #1b1b2f);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.search-container {
+    max-width: 500px;
+    margin: 30px auto 50px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-results {
+    position: absolute;
+    width: 100%;
+    background: #1f1f3a;
+    border-radius: 15px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.search-results div {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-results div:hover {
+    background: #2f2f5a;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.carousel-track img {
+    width: 600px;
+    height: 320px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.carousel-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.6),
+        0 6px 20px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+.carousel-text span {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #f0a500;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.banners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner {
+    position: relative;
+    height: 260px;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.banner-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #f0a500;
+    z-index: 2;
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    box-shadow: inset 0 -40px 40px rgba(0, 0, 0, 0.6);
+}
+
+.banner-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d6169c;
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.8),
+        0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.banner-content span {
+    font-size: 0.9rem;
+    color: #f0a500;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 60px;
+    background: #0b0b16;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 60px;
+}
+
+.footer-left {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: #fff;
+}
+
+.footer-left span {
+    color: #f0a500;
+}
+
+.footer-right p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right li {
+    margin-bottom: 8px;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #f0a500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    .carousel {
+        height: 280px;
+        margin: 0 20px 40px;
+    }
+
+    .carousel-track img {
+        width: 500px;
+        height: 280px;
+    }
+
+    .carousel-text {
+        font-size: 1.7rem;
+        padding: 0 20px;
+    }
+
+    .banners {
+        padding: 30px 20px;
+    }
+
+    .site-footer {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .search-container {
+        margin: 25px auto 40px;
+        padding: 0 10px;
+    }
+
+    .carousel {
+        height: 240px;
+        border-radius: 20px;
+    }
+
+    .carousel-track img {
+        width: 420px;
+        height: 240px;
+    }
+
+    .carousel-text {
+        font-size: 1.4rem;
+    }
+
+    .carousel-text span {
+        font-size: 1.1rem;
+    }
+
+    .banners {
+        grid-template-columns: 1fr;
+        padding: 25px 15px;
+    }
+
+    .banner {
+        height: 240px;
+    }
+
+    .banner-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    .footer-left {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .carousel {
+        height: 210px;
+    }
+
+    .carousel-track img {
+        width: 360px;
+        height: 210px;
+    }
+
+    .carousel-text {
+        font-size: 1.2rem;
+    }
+
+    .carousel-text span {
+        font-size: 1rem;
+    }
+
+    .banner-date {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+
+    .footer-left {
+        font-size: 1.6rem;
+    }
+}
