@@ -11,6 +11,63 @@ body {
     min-height: 100vh;
 }
 
+.logo {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #f0a500,
+        #d6169c,
+        #ffffff
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 10px rgba(240, 165, 0, 0.25),
+        0 0 30px rgba(214, 22, 156, 0.15);
+
+    animation: idleGlow 6s ease-in-out infinite;
+    transition: transform 0.4s ease, text-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    animation: shine 2s linear infinite;
+    transform: scale(1.05) translateY(-2px);
+    text-shadow:
+        0 0 15px rgba(240, 165, 0, 0.6),
+        0 0 40px rgba(214, 22, 156, 0.5),
+        0 0 80px rgba(214, 22, 156, 0.4);
+}
+
+@keyframes idleGlow {
+    0% {
+        background-position: 0%;
+        filter: brightness(1);
+    }
+    50% {
+        background-position: 100%;
+        filter: brightness(1.15);
+    }
+    100% {
+        background-position: 0%;
+        filter: brightness(1);
+    }
+}
+
+@keyframes shine {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 300%;
+    }
+}
+
 header {
     text-align: center;
     padding: 50px 20px;
@@ -366,3 +423,4 @@ footer {
         font-size: 1.6rem;
     }
 }
+
